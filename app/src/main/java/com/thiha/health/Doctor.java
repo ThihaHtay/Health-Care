@@ -7,13 +7,13 @@ import androidx.room.PrimaryKey;
 public class Doctor {
 
     @PrimaryKey(autoGenerate = true)
-        int id;
+    int id;
 
-        String name;
-        String address;
-        String exp;
-        String phoneno;
-        String fee;
+    String name;
+    String address;
+    String exp;
+    String phoneno;
+    String fee;
 
     public Doctor(int id, String name, String address, String exp, String phoneno, String fee) {
         this.id = id;

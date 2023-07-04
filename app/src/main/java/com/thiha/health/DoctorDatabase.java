@@ -6,10 +6,14 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities = {Doctor.class},version = 1 )
+import com.thiha.health.booking.Booking;
+import com.thiha.health.booking.BookingDAO;
+
+@Database(entities = {Doctor.class, Booking.class},version = 2 )
 public abstract class DoctorDatabase extends RoomDatabase {
     private static DoctorDatabase instance;
     public abstract DoctorDAO doctorDAO();
+    public abstract BookingDAO bookingDAO();
     public static synchronized DoctorDatabase getInstance(Context context){
         if(instance==null){
             instance= Room.databaseBuilder(context.getApplicationContext(),

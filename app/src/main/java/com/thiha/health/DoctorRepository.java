@@ -18,6 +18,8 @@ public class DoctorRepository {
         allDoctorList=doctorDAO.getALLDoctor();
     }
 
+
+
     public LiveData<List<Doctor>> getAllDoctorList(){
         return allDoctorList;
     }

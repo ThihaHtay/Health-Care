@@ -1,5 +1,7 @@
 package com.thiha.health;
 
+import static com.thiha.health.R.id.cardBookingList;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -31,13 +33,56 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(HomeActivity.this,LoginActivity.class));
             }
         });
-
         CardView findDoctor = findViewById(R.id.cardFindDoctor);
         findDoctor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this,FindDoctorActivity.class));
+                startActivity(new Intent(HomeActivity.this,DoctorDetailsActivity.class));
             }
         });
+
+
+        CardView bmi = findViewById(R.id.cardBMI);
+        bmi.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+              public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this,BMIActivity.class));
+            }
+        });
+        CardView bmr = findViewById(R.id.cardOrderDetails);
+        bmr.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this,BMRActivity.class));
+            }
+        });
+
+        CardView booking= findViewById(R.id.cardBookingList);
+        booking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,BookingListActivity.class));
+            }
+        });
+        CardView HealthArticles= findViewById(R.id.cardHealthArticles);
+        HealthArticles.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,HealthArticleActivity.class));
+            }
+        });
+
+        CardView bookingList= findViewById(cardBookingList);
+        bookingList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,BMIActivity.class));
+            }
+        });
+
+
+
     }
 }

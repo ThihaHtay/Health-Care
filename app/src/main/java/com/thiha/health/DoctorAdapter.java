@@ -1,6 +1,8 @@
 package com.thiha.health;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,13 +39,27 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DoctorAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull DoctorAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Doctor currentDoctor=doctorList.get(position);
         holder.tvDoctorName.setText(currentDoctor.getName());
         holder.tvDoctorAddress.setText(currentDoctor.getAddress());
         holder.tvDoctorPhoneno.setText(currentDoctor.getPhoneno());
-        holder.tvDoctorExperences.setText(currentDoctor.getExp());
+        holder.tvDoctorExperence.setText(currentDoctor.getExp());
         holder.tvDoctorFee.setText(currentDoctor.getFee());
+
+//        holder.itemView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(context,BookingActivity.class);
+//                intent.putExtra("name",doctorList.get(position).getName());
+//                intent.putExtra("address",doctorList.get(position).getAddress());
+//                intent.putExtra("phoneno",doctorList.get(position).getPhoneno());
+//                intent.putExtra("experience",doctorList.get(position).getExp());
+//                intent.putExtra("fee",doctorList.get(position).getFee());
+//
+//                context.startActivity(intent);
+//            }
+//        });
 
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +83,7 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvDoctorName;
         TextView tvDoctorAddress;
-        TextView tvDoctorExperences;
+        TextView tvDoctorExperence;
         TextView tvDoctorPhoneno;
         TextView tvDoctorFee;
         Button btnUpdate,btnDelete;
@@ -77,7 +93,7 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.ViewHolder
             super(itemView);
             tvDoctorName=itemView.findViewById(R.id.doctor_name_tv);
             tvDoctorAddress=itemView.findViewById(R.id.doctor_address_tv);
-            tvDoctorExperences=itemView.findViewById((R.id.doctor_experences_tv));
+            tvDoctorExperence=itemView.findViewById((R.id.doctor_experince_tv));
             tvDoctorPhoneno=itemView.findViewById(R.id.doctor_phoneno_tv);
             tvDoctorFee=itemView.findViewById(R.id.doctor_fee_tv);
             btnUpdate=itemView.findViewById(R.id.doctor_update_btn);

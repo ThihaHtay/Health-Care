@@ -14,7 +14,7 @@ import android.widget.Toast;
     EditText edtName;
     EditText edtAddress;
     EditText edtPhoneno;
-    EditText edtExperences;
+    EditText edtExperience;
     EditText edtFee;
     Button btnSave;
 
@@ -32,7 +32,7 @@ import android.widget.Toast;
         edtName=findViewById(R.id.edt_Name);
         edtAddress=findViewById(R.id.edt_Address);
         edtPhoneno=findViewById(R.id.edt_Phoneno);
-        edtExperences=findViewById(R.id.edt_Exp);
+        edtExperience=findViewById(R.id.edt_Exp);
         edtFee=findViewById(R.id.edt_Fee);
         btnSave=findViewById(R.id.btnSave);
     }
@@ -44,7 +44,7 @@ import android.widget.Toast;
                 String doctorName=edtName.getText().toString();
                 String doctorAddress=edtAddress.getText().toString();
                 String doctorPhoneno=edtPhoneno.getText().toString();
-                String doctorExperences=edtExperences.getText().toString();
+                String doctorExperience=edtExperience.getText().toString();
                 String doctorFee=edtFee.getText().toString();
 
                 if(TextUtils.isEmpty(doctorName)){
@@ -56,19 +56,19 @@ import android.widget.Toast;
                 else if(TextUtils.isEmpty(doctorPhoneno)){
                     Toast.makeText(AddNewDoctorActivity.this,
                             "Doctor's phone number can't be empty",Toast.LENGTH_SHORT).show();}
-                else if(TextUtils.isEmpty(doctorExperences)){
+                else if(TextUtils.isEmpty(doctorExperience)){
                     Toast.makeText(AddNewDoctorActivity.this,
-                            "Doctor's experences can't be empty",Toast.LENGTH_SHORT).show();}
+                            "Doctor's experiencescan't be empty",Toast.LENGTH_SHORT).show();}
                 else if(TextUtils.isEmpty(doctorFee)){
                     Toast.makeText(AddNewDoctorActivity.this,
                             "Doctor's fee can't be empty",Toast.LENGTH_SHORT).show();}
                 else if (!TextUtils.isEmpty(doctorName) && !TextUtils.isEmpty(doctorAddress) && !TextUtils.isEmpty(doctorPhoneno)
-                            && !TextUtils.isEmpty(doctorExperences) && !TextUtils.isEmpty(doctorFee)){
+                            && !TextUtils.isEmpty(doctorExperience) && !TextUtils.isEmpty(doctorFee)){
                     Intent i=new Intent();
                     i.putExtra("doctor_name",doctorName);
                     i.putExtra("doctor_address",doctorAddress);
                     i.putExtra("doctor_phoneno",doctorPhoneno);
-                    i.putExtra("doctor_experences",doctorExperences);
+                    i.putExtra("doctor_experience",doctorExperience);
                     i.putExtra("doctor_fee",doctorFee);
 
                     setResult(RESULT_OK,i);

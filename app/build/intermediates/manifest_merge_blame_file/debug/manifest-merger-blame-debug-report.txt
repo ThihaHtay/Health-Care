@@ -1,0 +1,169 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.thiha.health"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="27"
+8-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml
+10
+11    <permission
+11-->[androidx.core:core:1.9.0] C:\Users\USER\.gradle\caches\transforms-3\36d2bebf921bf3e653b8992b98e79081\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+12        android:name="com.thiha.health.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+12-->[androidx.core:core:1.9.0] C:\Users\USER\.gradle\caches\transforms-3\36d2bebf921bf3e653b8992b98e79081\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+13        android:protectionLevel="signature" />
+13-->[androidx.core:core:1.9.0] C:\Users\USER\.gradle\caches\transforms-3\36d2bebf921bf3e653b8992b98e79081\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+14
+15    <uses-permission android:name="com.thiha.health.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+15-->[androidx.core:core:1.9.0] C:\Users\USER\.gradle\caches\transforms-3\36d2bebf921bf3e653b8992b98e79081\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+15-->[androidx.core:core:1.9.0] C:\Users\USER\.gradle\caches\transforms-3\36d2bebf921bf3e653b8992b98e79081\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+16
+17    <application
+17-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:5:5-60:19
+18        android:allowBackup="true"
+18-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:6:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.9.0] C:\Users\USER\.gradle\caches\transforms-3\36d2bebf921bf3e653b8992b98e79081\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+20        android:dataExtractionRules="@xml/data_extraction_rules"
+20-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:7:9-65
+21        android:debuggable="true"
+22        android:extractNativeLibs="false"
+23        android:fullBackupContent="@xml/backup_rules"
+23-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:8:9-54
+24        android:icon="@mipmap/ic_launcher"
+24-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:9:9-43
+25        android:label="@string/app_name"
+25-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:10:9-41
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:11:9-54
+27        android:supportsRtl="true"
+27-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:12:9-35
+28        android:testOnly="true"
+29        android:theme="@style/Theme.Health" >
+29-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:13:9-44
+30        <activity
+30-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:15:9-17:40
+31            android:name="com.thiha.health.HealthArticlesActivity"
+31-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:16:13-51
+32            android:exported="false" />
+32-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:17:13-37
+33        <activity
+33-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:18:9-20:40
+34            android:name="com.thiha.health.HealthArticleActivity"
+34-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:19:13-50
+35            android:exported="false" />
+35-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:20:13-37
+36        <activity
+36-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:21:9-23:40
+37            android:name="com.thiha.health.BookingListActivity"
+37-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:22:13-48
+38            android:exported="false" />
+38-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:23:13-37
+39        <activity
+39-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:24:9-26:40
+40            android:name="com.thiha.health.BookingActivity"
+40-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:25:13-44
+41            android:exported="false" />
+41-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:26:13-37
+42        <activity
+42-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:27:9-29:40
+43            android:name="com.thiha.health.BMRActivity"
+43-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:28:13-40
+44            android:exported="false" />
+44-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:29:13-37
+45        <activity
+45-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:30:9-32:40
+46            android:name="com.thiha.health.BMIActivity"
+46-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:31:13-40
+47            android:exported="false" />
+47-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:32:13-37
+48        <activity
+48-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:33:9-35:40
+49            android:name="com.thiha.health.UpdateDoctorActivity"
+49-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:34:13-49
+50            android:exported="false" />
+50-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:35:13-37
+51        <activity
+51-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:36:9-38:40
+52            android:name="com.thiha.health.AddNewDoctorActivity"
+52-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:37:13-49
+53            android:exported="false" />
+53-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:38:13-37
+54        <activity
+54-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:39:9-41:40
+55            android:name="com.thiha.health.DoctorDetailsActivity"
+55-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:40:13-50
+56            android:exported="false" />
+56-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:41:13-37
+57        <activity
+57-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:42:9-44:40
+58            android:name="com.thiha.health.FindDoctorActivity"
+58-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:43:13-47
+59            android:exported="false" />
+59-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:44:13-37
+60        <activity
+60-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:45:9-53:20
+61            android:name="com.thiha.health.HomeActivity"
+61-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:46:13-41
+62            android:exported="true" >
+62-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:47:13-36
+63            <intent-filter>
+63-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:48:13-52:29
+64                <action android:name="android.intent.action.MAIN" />
+64-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:49:17-69
+64-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:49:25-66
+65
+66                <category android:name="android.intent.category.LAUNCHER" />
+66-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:51:17-77
+66-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:51:27-74
+67            </intent-filter>
+68        </activity>
+69        <activity
+69-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:54:9-56:40
+70            android:name="com.thiha.health.RegisterActivity"
+70-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:55:13-45
+71            android:exported="false" />
+71-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:56:13-37
+72        <activity
+72-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:57:9-59:39
+73            android:name="com.thiha.health.LoginActivity"
+73-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:58:13-42
+74            android:exported="true" />
+74-->D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\AndroidManifest.xml:59:13-36
+75
+76        <service
+76-->[androidx.room:room-runtime:2.5.2] C:\Users\USER\.gradle\caches\transforms-3\38a4d60f4fa8eb32093f686cfe78be73\transformed\room-runtime-2.5.2\AndroidManifest.xml:24:9-28:63
+77            android:name="androidx.room.MultiInstanceInvalidationService"
+77-->[androidx.room:room-runtime:2.5.2] C:\Users\USER\.gradle\caches\transforms-3\38a4d60f4fa8eb32093f686cfe78be73\transformed\room-runtime-2.5.2\AndroidManifest.xml:25:13-74
+78            android:directBootAware="true"
+78-->[androidx.room:room-runtime:2.5.2] C:\Users\USER\.gradle\caches\transforms-3\38a4d60f4fa8eb32093f686cfe78be73\transformed\room-runtime-2.5.2\AndroidManifest.xml:26:13-43
+79            android:exported="false" />
+79-->[androidx.room:room-runtime:2.5.2] C:\Users\USER\.gradle\caches\transforms-3\38a4d60f4fa8eb32093f686cfe78be73\transformed\room-runtime-2.5.2\AndroidManifest.xml:27:13-37
+80
+81        <provider
+81-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\cb52533986600588c149468d62a185bb\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+82            android:name="androidx.startup.InitializationProvider"
+82-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\cb52533986600588c149468d62a185bb\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+83            android:authorities="com.thiha.health.androidx-startup"
+83-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\cb52533986600588c149468d62a185bb\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+84            android:exported="false" >
+84-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\cb52533986600588c149468d62a185bb\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+85            <meta-data
+85-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\cb52533986600588c149468d62a185bb\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+86                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+86-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\cb52533986600588c149468d62a185bb\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+87                android:value="androidx.startup" />
+87-->[androidx.emoji2:emoji2:1.2.0] C:\Users\USER\.gradle\caches\transforms-3\cb52533986600588c149468d62a185bb\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+88            <meta-data
+88-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\1af2e57e16c187592bfddc013f59347b\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+89                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+89-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\1af2e57e16c187592bfddc013f59347b\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+90                android:value="androidx.startup" />
+90-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\USER\.gradle\caches\transforms-3\1af2e57e16c187592bfddc013f59347b\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+91        </provider>
+92    </application>
+93
+94</manifest>

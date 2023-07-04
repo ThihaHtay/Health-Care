@@ -14,7 +14,7 @@ public class UpdateDoctorActivity extends AppCompatActivity {
     EditText edtName;
     EditText edtAddress;
     EditText edtPhoneno;
-    EditText edtExperences;
+    EditText edtExperience;
     EditText edtFee;
     Button btnUpdate;
     //for update
@@ -38,7 +38,7 @@ public class UpdateDoctorActivity extends AppCompatActivity {
         edtName=findViewById(R.id.doctor_name_update_edt);
         edtAddress=findViewById(R.id.doctor_address_update_edt);
         edtPhoneno=findViewById(R.id.doctor_phoneno_update_edt);
-        edtExperences=findViewById(R.id.doctor_experience_update_edt);
+        edtExperience=findViewById(R.id.doctor_experience_update_edt);
         edtFee=findViewById(R.id.doctor_fee_update_edt);
         btnUpdate=findViewById(R.id.update_btn);
 
@@ -55,7 +55,7 @@ public class UpdateDoctorActivity extends AppCompatActivity {
 
         edtName.setText(currentDoctorName);
         edtAddress.setText(currentDoctorAddress);
-        edtExperences.setText(currentDoctorExperience);
+        edtExperience.setText(currentDoctorExperience);
         edtPhoneno.setText(currentDoctorPhoneno);
         edtFee.setText(currentDoctorFee);
 
@@ -67,7 +67,7 @@ public class UpdateDoctorActivity extends AppCompatActivity {
                 String doctorName=edtName.getText().toString();
                 String doctorAddress=edtAddress.getText().toString();
                 String doctorPhoneno=edtPhoneno.getText().toString();
-                String doctorExperences=edtExperences.getText().toString();
+                String doctorExperiences=edtExperience.getText().toString();
                 String doctorFee=edtFee.getText().toString();
 
                 if(TextUtils.isEmpty(doctorName)){
@@ -79,19 +79,19 @@ public class UpdateDoctorActivity extends AppCompatActivity {
                 else if(TextUtils.isEmpty(doctorPhoneno)){
                     Toast.makeText(UpdateDoctorActivity.this,
                             "Doctor's phone number can't be empty",Toast.LENGTH_SHORT).show();}
-                else if(TextUtils.isEmpty(doctorExperences)){
+                else if(TextUtils.isEmpty(doctorExperiences)){
                     Toast.makeText(UpdateDoctorActivity.this,
-                            "Doctor's experences can't be empty",Toast.LENGTH_SHORT).show();}
+                            "Doctor's experiences can't be empty",Toast.LENGTH_SHORT).show();}
                 else if(TextUtils.isEmpty(doctorFee)){
                     Toast.makeText(UpdateDoctorActivity.this,
                             "Doctor's fee can't be empty",Toast.LENGTH_SHORT).show();}
                 else if (!TextUtils.isEmpty(doctorName) && !TextUtils.isEmpty(doctorAddress) && !TextUtils.isEmpty(doctorPhoneno)
-                        && !TextUtils.isEmpty(doctorExperences) && !TextUtils.isEmpty(doctorFee)){
+                        && !TextUtils.isEmpty(doctorExperiences) && !TextUtils.isEmpty(doctorFee)){
                     Intent i=new Intent();
                     i.putExtra("doctor_name",doctorName);
                     i.putExtra("doctor_address",doctorAddress);
                     i.putExtra("doctor_phoneno",doctorPhoneno);
-                    i.putExtra("doctor_experences",doctorExperences);
+                    i.putExtra("doctor_experience",doctorExperiences);
                     i.putExtra("doctor_fee",doctorFee);
                     i.putExtra("doctor_id",currentId);
 
