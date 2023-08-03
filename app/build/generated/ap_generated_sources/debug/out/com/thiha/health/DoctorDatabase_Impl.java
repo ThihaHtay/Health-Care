@@ -17,8 +17,6 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Callback;
 import androidx.sqlite.db.SupportSQLiteOpenHelper.Configuration;
-import com.thiha.health.booking.BookingDAO;
-import com.thiha.health.booking.BookingDAO_Impl;
 import java.lang.Class;
 import java.lang.Override;
 import java.lang.String;
@@ -34,23 +32,19 @@ import java.util.Set;
 public final class DoctorDatabase_Impl extends DoctorDatabase {
   private volatile DoctorDAO _doctorDAO;
 
-  private volatile BookingDAO _bookingDAO;
-
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(2) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `doctor_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `address` TEXT, `exp` TEXT, `phoneno` TEXT, `fee` TEXT)");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `booking_table` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `address` TEXT, `exp` TEXT, `phoneno` TEXT, `fee` TEXT, `bdate` TEXT, `btime` TEXT)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '31979c4690587dd6c315c9ee0b1d5b5b')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '4faf6d3716ede520add50f3d1de369b4')");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("DROP TABLE IF EXISTS `doctor_table`");
-        _db.execSQL("DROP TABLE IF EXISTS `booking_table`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onDestructiveMigration(_db);
@@ -105,27 +99,9 @@ public final class DoctorDatabase_Impl extends DoctorDatabase {
                   + " Expected:\n" + _infoDoctorTable + "\n"
                   + " Found:\n" + _existingDoctorTable);
         }
-        final HashMap<String, TableInfo.Column> _columnsBookingTable = new HashMap<String, TableInfo.Column>(8);
-        _columnsBookingTable.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsBookingTable.put("name", new TableInfo.Column("name", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsBookingTable.put("address", new TableInfo.Column("address", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsBookingTable.put("exp", new TableInfo.Column("exp", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsBookingTable.put("phoneno", new TableInfo.Column("phoneno", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsBookingTable.put("fee", new TableInfo.Column("fee", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsBookingTable.put("bdate", new TableInfo.Column("bdate", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsBookingTable.put("btime", new TableInfo.Column("btime", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        final HashSet<TableInfo.ForeignKey> _foreignKeysBookingTable = new HashSet<TableInfo.ForeignKey>(0);
-        final HashSet<TableInfo.Index> _indicesBookingTable = new HashSet<TableInfo.Index>(0);
-        final TableInfo _infoBookingTable = new TableInfo("booking_table", _columnsBookingTable, _foreignKeysBookingTable, _indicesBookingTable);
-        final TableInfo _existingBookingTable = TableInfo.read(_db, "booking_table");
-        if (! _infoBookingTable.equals(_existingBookingTable)) {
-          return new RoomOpenHelper.ValidationResult(false, "booking_table(com.thiha.health.booking.Booking).\n"
-                  + " Expected:\n" + _infoBookingTable + "\n"
-                  + " Found:\n" + _existingBookingTable);
-        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "31979c4690587dd6c315c9ee0b1d5b5b", "1218810ec38e763cd9d5fdad9d6a05b0");
+    }, "4faf6d3716ede520add50f3d1de369b4", "969528e38c402d3432970a69cb9b8f46");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -138,7 +114,7 @@ public final class DoctorDatabase_Impl extends DoctorDatabase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "doctor_table","booking_table");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "doctor_table");
   }
 
   @Override
@@ -148,7 +124,6 @@ public final class DoctorDatabase_Impl extends DoctorDatabase {
     try {
       super.beginTransaction();
       _db.execSQL("DELETE FROM `doctor_table`");
-      _db.execSQL("DELETE FROM `booking_table`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
@@ -163,7 +138,6 @@ public final class DoctorDatabase_Impl extends DoctorDatabase {
   protected Map<Class<?>, List<Class<?>>> getRequiredTypeConverters() {
     final HashMap<Class<?>, List<Class<?>>> _typeConvertersMap = new HashMap<Class<?>, List<Class<?>>>();
     _typeConvertersMap.put(DoctorDAO.class, DoctorDAO_Impl.getRequiredConverters());
-    _typeConvertersMap.put(BookingDAO.class, BookingDAO_Impl.getRequiredConverters());
     return _typeConvertersMap;
   }
 
@@ -189,20 +163,6 @@ public final class DoctorDatabase_Impl extends DoctorDatabase {
           _doctorDAO = new DoctorDAO_Impl(this);
         }
         return _doctorDAO;
-      }
-    }
-  }
-
-  @Override
-  public BookingDAO bookingDAO() {
-    if (_bookingDAO != null) {
-      return _bookingDAO;
-    } else {
-      synchronized(this) {
-        if(_bookingDAO == null) {
-          _bookingDAO = new BookingDAO_Impl(this);
-        }
-        return _bookingDAO;
       }
     }
   }

@@ -10,7 +10,7 @@ import java.util.List;
 
 public class BookingViewModel extends AndroidViewModel {
     private BookingRepository bookingRepository;
-    public static LiveData<List<Booking>>  allBookingList;
+    public  LiveData<List<Booking>>  allBookingList;
 
     public BookingViewModel(@NonNull Application application) {
         super(application);

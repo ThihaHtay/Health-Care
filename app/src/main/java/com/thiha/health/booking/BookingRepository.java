@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
 
+import com.thiha.health.BookingDatabase;
 import com.thiha.health.Doctor;
 import com.thiha.health.DoctorDAO;
 import com.thiha.health.DoctorDatabase;
@@ -16,7 +17,7 @@ public class BookingRepository {
     private LiveData<List<Booking>> allBookingList;
 
     public BookingRepository(Application application) {
-        DoctorDatabase doctorDatabase=DoctorDatabase.getInstance(application);
+        BookingDatabase doctorDatabase=BookingDatabase.getInstance(application);
         bookingDAO= doctorDatabase.bookingDAO();
 
         allBookingList=bookingDAO.getALLBooking();
@@ -45,6 +46,7 @@ public class BookingRepository {
         private UpdateBookingAsyncTask(BookingDAO bookingDAO){
             this.bookingDAO=bookingDAO;
         }
+        @Override
         protected Void doInBackground(Booking... bookings){
             bookingDAO.update(bookings[0]);
             return null;
@@ -62,7 +64,5 @@ public class BookingRepository {
             return null;
         }
     }
-
-
 
 }

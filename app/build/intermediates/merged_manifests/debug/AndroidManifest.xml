@@ -28,7 +28,19 @@
         android:testOnly="true"
         android:theme="@style/Theme.Health" >
         <activity
-            android:name="com.thiha.health.HealthArticlesActivity"
+            android:name="com.thiha.health.UpdateHospitalActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.thiha.health.AddNewHospitalActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.thiha.health.HospitalListActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.thiha.health.BookingUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.thiha.health.NotesTakerActivity"
             android:exported="false" />
         <activity
             android:name="com.thiha.health.HealthArticleActivity"
@@ -58,7 +70,7 @@
             android:name="com.thiha.health.FindDoctorActivity"
             android:exported="false" />
         <activity
-            android:name="com.thiha.health.HomeActivity"
+            android:name="com.thiha.health.LoginActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -70,7 +82,7 @@
             android:name="com.thiha.health.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name="com.thiha.health.LoginActivity"
+            android:name="com.thiha.health.HomeActivity"
             android:exported="true" />
 
         <service

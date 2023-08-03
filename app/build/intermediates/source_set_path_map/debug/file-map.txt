@@ -26,11 +26,11 @@ com.thiha.health.app-recyclerview-1.1.0-24 C:\Users\USER\.gradle\caches\transfor
 com.thiha.health.app-appcompat-resources-1.6.1-25 C:\Users\USER\.gradle\caches\transforms-3\d91672f65fec0394f651bfa7a07b1a15\transformed\appcompat-resources-1.6.1\res
 com.thiha.health.app-coordinatorlayout-1.1.0-26 C:\Users\USER\.gradle\caches\transforms-3\e43f8950f36ff726cb272ac84d6a9059\transformed\coordinatorlayout-1.1.0\res
 com.thiha.health.app-emoji2-views-helper-1.2.0-27 C:\Users\USER\.gradle\caches\transforms-3\ee7c392adb05461ab6116179fa8f2058\transformed\emoji2-views-helper-1.2.0\res
-com.thiha.health.app-pngs-28 D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\build\generated\res\pngs\debug
-com.thiha.health.app-resValues-29 D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\build\generated\res\resValues\debug
-com.thiha.health.app-rs-30 D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\build\generated\res\rs\debug
-com.thiha.health.app-packageDebugResources-31 D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.thiha.health.app-packageDebugResources-32 D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.thiha.health.app-merged_res-33 D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\build\intermediates\merged_res\debug
-com.thiha.health.app-debug-34 D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\debug\res
-com.thiha.health.app-main-35 D:\HealthCarefix UpdateforNote\HealthCarefix\HealthCare\Health\app\src\main\res
+com.thiha.health.app-pngs-28 C:\Users\USER\Healthupdate1.0\Health\app\build\generated\res\pngs\debug
+com.thiha.health.app-resValues-29 C:\Users\USER\Healthupdate1.0\Health\app\build\generated\res\resValues\debug
+com.thiha.health.app-rs-30 C:\Users\USER\Healthupdate1.0\Health\app\build\generated\res\rs\debug
+com.thiha.health.app-packageDebugResources-31 C:\Users\USER\Healthupdate1.0\Health\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.thiha.health.app-packageDebugResources-32 C:\Users\USER\Healthupdate1.0\Health\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.thiha.health.app-merged_res-33 C:\Users\USER\Healthupdate1.0\Health\app\build\intermediates\merged_res\debug
+com.thiha.health.app-debug-34 C:\Users\USER\Healthupdate1.0\Health\app\src\debug\res
+com.thiha.health.app-main-35 C:\Users\USER\Healthupdate1.0\Health\app\src\main\res

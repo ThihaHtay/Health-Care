@@ -5,16 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:background="@drawable/back1">
+    android:background="@drawable/m2">
     <TextView
         android:id="@+id/login_title_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Healthcare Emergency"
         android:textStyle="bold"
+
         android:layout_marginTop="25dp"
-        android:textSize="35dp"
-        android:textColor="@color/purple_200"
+        android:textSize="30dp"
+        android:textColor="@color/black"
         android:layout_centerHorizontal="true"/>
 
     <TextView
@@ -22,10 +23,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
-        android:textSize="35dp"
+
+        android:textSize="30dp"
         android:textStyle="bold"
-        android:layout_marginTop="100dp"
-        android:textColor="@color/purple_200"
+        android:layout_marginTop="70dp"
+        android:textColor="@color/black"
         android:layout_centerHorizontal="true"/>
 
     <TextView
@@ -34,11 +36,12 @@
         android:layout_height="wrap_content"
         android:text="Name"
         android:textSize="25dp"
+        android:fontFamily="cursive"
         android:layout_below="@id/login_tv"
         android:textStyle="bold"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="100dp"
-        android:textColor="@color/purple_200"
+        android:textColor="@color/black"
         />
     <EditText
         android:id="@+id/login_name_edt"
@@ -49,9 +52,11 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:paddingLeft="30dp"
-        android:background="@drawable/btn_bg"
+        android:textColor="@color/dark_blue"
+        android:background="@drawable/back"
         android:layout_marginTop="10dp"
-        android:textColor="@color/purple_200"
+
+
         />
 
     <TextView
@@ -60,25 +65,25 @@
         android:layout_height="wrap_content"
         android:text="Password"
         android:textSize="25dp"
+        android:fontFamily="cursive"
         android:layout_below="@id/login_name_edt"
         android:textStyle="bold"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="40dp"
-        android:textColor="@color/purple_200"
-        />
+        android:textColor="@color/black" />
     <EditText
         android:id="@+id/login_password_edt"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:inputType="textPassword"
         android:layout_below="@id/password_tv"
-        android:hint="Enter your name"
+        android:hint="Enter your Password"
+        android:textColor="@color/dark_blue"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:paddingLeft="30dp"
-        android:background="@drawable/btn_bg"
+        android:background="@drawable/back"
         android:layout_marginTop="10dp"
-        android:textColor="@color/purple_200"
         />
     <TextView
         android:id="@+id/textViewNewUser"
@@ -86,9 +91,10 @@
         android:layout_height="wrap_content"
         android:text="Register for New User"
         android:textSize="25dp"
+
         android:layout_marginTop="30dp"
-        android:layout_below="@id/login_password_edt"
-        android:textColor="@color/purple_200"
+        android:layout_below="@id/buttonLogin"
+        android:textColor="@color/black"
         android:layout_centerHorizontal="true"/>
 
     <Button
@@ -97,9 +103,12 @@
         android:layout_height="50dp"
         android:text="Login"
         android:textSize="20dp"
-        android:layout_marginBottom="50dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/login_password_edt"
         android:layout_centerHorizontal="true"
-        />
+        android:layout_marginTop="100dp"/>
+    <!--        android:layout_marginBottom="50dp"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    />
 
 </RelativeLayout>

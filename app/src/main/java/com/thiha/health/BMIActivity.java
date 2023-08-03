@@ -31,7 +31,7 @@ public class BMIActivity extends AppCompatActivity {
         edFeet = findViewById(R.id.edFeet);
         edKg = findViewById(R.id.edKg);
         cardBtn = findViewById(R.id.cardBtn);
-        bmrtext = findViewById(R.id.tv_bmr_result);
+       // bmrtext = findViewById(R.id.tv_bmr_result);
         bmitext = findViewById(R.id.tv_bmi_result);
         edIns = findViewById(R.id.edIns);
 

@@ -35,6 +35,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+                finish();
             }
         });
         btn.setOnClickListener(new View.OnClickListener() {
@@ -59,8 +60,8 @@ public class RegisterActivity extends AppCompatActivity {
 
                             else {
                                  Toast.makeText(getApplicationContext(),
-                                    "Password must contain at least 8 characters , " +
-                                            "having letter ,digit and special symbols", Toast.LENGTH_SHORT).show();
+                                    "Password must contain at least 5 characters , " +
+                                            "having letter ,digit and special symbols", Toast.LENGTH_LONG).show();
                                 }
                     }else{
                         Toast.makeText(getApplicationContext(),
@@ -73,7 +74,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
     public static boolean isValid(String passwordhere){
         int f1=0,f2=0,f3=0;
-        if (passwordhere.length() < 8){
+        if (passwordhere.length() < 5){
             return false;
         } else {
             for (int p= 0; p< passwordhere.length();p++) {

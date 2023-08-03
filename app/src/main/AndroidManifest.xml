@@ -13,7 +13,19 @@
         android:theme="@style/Theme.Health"
         tools:targetApi="32">
         <activity
-            android:name=".HealthArticlesActivity"
+            android:name=".UpdateHospitalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddNewHospitalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HospitalListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BookingUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotesTakerActivity"
             android:exported="false" />
         <activity
             android:name=".HealthArticleActivity"
@@ -43,7 +55,7 @@
             android:name=".FindDoctorActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,7 +67,7 @@
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".HomeActivity"
             android:exported="true" />
     </application>
 

@@ -30,7 +30,9 @@ public class HomeActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.clear();
                 editor.apply();
+                finish();
                 startActivity(new Intent(HomeActivity.this,LoginActivity.class));
+
             }
         });
         CardView findDoctor = findViewById(R.id.cardFindDoctor);
@@ -42,7 +44,7 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
-        CardView bmi = findViewById(R.id.cardBMI);
+        CardView bmi = findViewById(R.id.cardOrderDetails);
         bmi.setOnClickListener(new View.OnClickListener() {
             @Override
 
@@ -50,14 +52,14 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(HomeActivity.this,BMIActivity.class));
             }
         });
-        CardView bmr = findViewById(R.id.cardOrderDetails);
-        bmr.setOnClickListener(new View.OnClickListener() {
-            @Override
-
-            public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this,BMRActivity.class));
-            }
-        });
+//        CardView bmr = findViewById(R.id.cardExit);
+//        bmr.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//
+//            public void onClick(View view) {
+//                startActivity(new Intent(HomeActivity.this,BMRActivity.class));
+//            }
+//        });
 
         CardView booking= findViewById(R.id.cardBookingList);
         booking.setOnClickListener(new View.OnClickListener() {
@@ -73,15 +75,13 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(HomeActivity.this,HealthArticleActivity.class));
             }
         });
-
-        CardView bookingList= findViewById(cardBookingList);
-        bookingList.setOnClickListener(new View.OnClickListener() {
+        CardView HospitalList= findViewById(R.id.cardHospitalList);
+        HospitalList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this,BMIActivity.class));
+                startActivity(new Intent(HomeActivity.this,HospitalListActivity.class));
             }
         });
-
 
 
     }

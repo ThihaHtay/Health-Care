@@ -5,17 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:background="@drawable/background">
+    android:background="@drawable/m4">
     <TextView
         android:id="@+id/register_title_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Healthcare Emergency"
         android:textStyle="bold"
+        android:textColor="@color/dark_blue"
         android:layout_marginTop="25dp"
+
         android:textSize="35dp"
-        android:textColor="@color/purple_200"
+
         android:layout_centerHorizontal="true"/>
+
 
     <TextView
         android:id="@+id/register_tv"
@@ -25,7 +28,8 @@
         android:textSize="35dp"
         android:textStyle="bold"
         android:layout_marginTop="70dp"
-        android:textColor="@color/purple_200"
+        android:textColor="@color/dark_blue"
+
         android:layout_centerHorizontal="true"/>
 
     <TextView
@@ -34,11 +38,13 @@
         android:layout_height="wrap_content"
         android:text="Name"
         android:textSize="25dp"
+        android:textColor="@color/dark_blue"
+        android:fontFamily="cursive"
         android:layout_below="@id/register_tv"
         android:textStyle="bold"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
-        android:textColor="@color/purple_200"
+
         />
     <EditText
         android:id="@+id/register_name_edt"
@@ -46,25 +52,28 @@
         android:layout_height="50dp"
         android:layout_below="@id/name_tv"
         android:hint="Enter your name"
+        android:textColor="@color/dark_blue"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:paddingLeft="30dp"
-        android:background="@drawable/btn_bg"
+        android:background="@drawable/back"
         android:layout_marginTop="10dp"
-        android:textColor="@color/purple_200"
+
         />
 
     <TextView
         android:id="@+id/email_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="cursive"
         android:text="Email"
         android:textSize="25dp"
+        android:textColor="@color/dark_blue"
         android:layout_below="@id/register_name_edt"
         android:textStyle="bold"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
-        android:textColor="@color/purple_200"
+
         />
     <EditText
         android:id="@+id/reg_email_edt"
@@ -72,13 +81,14 @@
         android:layout_height="50dp"
         android:layout_below="@id/email_tv"
         android:hint="Enter your email"
+        android:textColor="@color/dark_blue"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:inputType="textEmailAddress"
         android:paddingLeft="30dp"
-        android:background="@drawable/btn_bg"
+        android:background="@drawable/back"
         android:layout_marginTop="10dp"
-        android:textColor="@color/purple_200"
+
         />
 
 
@@ -88,25 +98,28 @@
         android:layout_height="wrap_content"
         android:text="Password"
         android:textSize="25dp"
+        android:textColor="@color/dark_blue"
+        android:fontFamily="cursive"
         android:layout_below="@id/reg_email_edt"
         android:textStyle="bold"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
-        android:textColor="@color/purple_200"
+
         />
     <EditText
         android:id="@+id/register_password_edt"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:inputType="textPassword"
+        android:textColor="@color/dark_blue"
         android:layout_below="@id/register_password_tv"
         android:hint="Enter password"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:paddingLeft="30dp"
-        android:background="@drawable/btn_bg"
+        android:background="@drawable/back"
         android:layout_marginTop="10dp"
-        android:textColor="@color/purple_200"
+
         />
     <TextView
         android:id="@+id/confirm_password_tv"
@@ -114,25 +127,28 @@
         android:layout_height="wrap_content"
         android:text="Confirm Password"
         android:textSize="25dp"
+        android:textColor="@color/dark_blue"
+        android:fontFamily="cursive"
         android:layout_below="@id/register_password_edt"
         android:textStyle="bold"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
-        android:textColor="@color/purple_200"
+
         />
     <EditText
         android:id="@+id/confirm_password_edt"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:inputType="textPassword"
+        android:textColor="@color/dark_blue"
         android:layout_below="@id/confirm_password_tv"
         android:hint="Enter confirm password"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:paddingLeft="30dp"
-        android:background="@drawable/btn_bg"
+        android:background="@drawable/back"
         android:layout_marginTop="10dp"
-        android:textColor="@color/purple_200"
+
         />
 
 
@@ -143,7 +159,7 @@
         android:text="Register"
         android:textSize="20dp"
         android:background="@drawable/btn_bg"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/confirm_password_edt"
         />
@@ -151,12 +167,14 @@
         android:id="@+id/textViewExistingUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/dark_blue"
         android:text="Already have an account?"
         android:textSize="25dp"
         android:textStyle="italic"
-        android:layout_marginTop="20dp"
+        android:fontFamily="cursive"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/buttonRegister"
-        android:textColor="@color/purple_200"
+
         android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

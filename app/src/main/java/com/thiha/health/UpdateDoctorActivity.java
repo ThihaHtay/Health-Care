@@ -46,8 +46,10 @@ public class UpdateDoctorActivity extends AppCompatActivity {
         currentId=getIntent().getIntExtra("doctor_id",0);
         currentDoctorName=getIntent().getStringExtra("doctor_name");
         currentDoctorAddress=getIntent().getStringExtra("doctor_address");
-        currentDoctorPhoneno=getIntent().getStringExtra("doctor_phoneno");
-        currentDoctorExperience=getIntent().getStringExtra("doctor_experience");
+
+        //////////takecare
+        currentDoctorPhoneno=getIntent().getStringExtra("doctor_experience");
+        currentDoctorExperience=getIntent().getStringExtra("doctor_phoneno");
         currentDoctorFee=getIntent().getStringExtra("doctor_fee");
 
     }
@@ -55,8 +57,9 @@ public class UpdateDoctorActivity extends AppCompatActivity {
 
         edtName.setText(currentDoctorName);
         edtAddress.setText(currentDoctorAddress);
-        edtExperience.setText(currentDoctorExperience);
+
         edtPhoneno.setText(currentDoctorPhoneno);
+        edtExperience.setText(currentDoctorExperience);
         edtFee.setText(currentDoctorFee);
 
 

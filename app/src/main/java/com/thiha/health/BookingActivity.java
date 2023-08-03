@@ -1,30 +1,20 @@
 package com.thiha.health;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.thiha.health.booking.Booking;
-import com.thiha.health.booking.BookingAdapter;
-import com.thiha.health.booking.BookingViewModel;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.List;
 import java.util.Locale;
 
 public class BookingActivity extends AppCompatActivity {
@@ -34,47 +24,41 @@ public class BookingActivity extends AppCompatActivity {
     EditText edtPhoneno;
     EditText edtExperience;
     EditText edtFee;
-    Button btnBooking;
+    Button btnsaveBooking;
     //for time and date picker
-     TextView dateTextView;
-     TextView timeTextView;
-     Calendar selectedDateTime;
-    String selectedDate;
-    String selectedTime;
-    BookingViewModel bookingViewModel;
-
-    BookingAdapter bookingAdapter;
-    RecyclerView recyclerView;
+    private TextView dateTextView;
+    private TextView timeTextView;
+    private Calendar selectedDateTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking);
-
         initView();
-        initEvent();
+        inintEvent();
 
+    }
+    private void initView(){
+        edtName=findViewById(R.id.book_name_edt);
+        edtAddress=findViewById(R.id.book_address_edt);
+        edtPhoneno=findViewById(R.id.book_phoneno_edt);
+        edtExperience=findViewById(R.id.book_experience_edt);
+        edtFee=findViewById(R.id.book_fee_edt);
+        btnsaveBooking=findViewById(R.id.booking_Save_btn);
 
-        edtName = findViewById(R.id.doctor_name_update_edt);
-        edtAddress = findViewById(R.id.doctor_address_update_edt);
-        edtPhoneno = findViewById(R.id.doctor_phoneno_update_edt);
-        edtExperience = findViewById(R.id.doctor_experience_update_edt);
-        edtFee = findViewById(R.id.doctor_fee_update_edt);
-        btnBooking = findViewById(R.id.booking_btn);
-        bookingViewModel= new ViewModelProvider(this).get(BookingViewModel.class);
         //for date and time picker
         dateTextView = findViewById(R.id.book_date_txt);
         timeTextView = findViewById(R.id.book_time_txt);
 
         selectedDateTime = Calendar.getInstance();
 
-        Intent intent = getIntent();
-        String name = getIntent().getStringExtra("name");
-        String address = getIntent().getStringExtra("address");
-        String phoneno = getIntent().getStringExtra("phoneno");
-        String experience = getIntent().getStringExtra("experience");
-        String fee = getIntent().getStringExtra("fee");
-        //startActivity(intent);
+        Intent intent=getIntent();
+        String name=getIntent().getStringExtra("name");
+        String address=getIntent().getStringExtra("address");
+        String phoneno=getIntent().getStringExtra("phoneno");
+        String experience=getIntent().getStringExtra("experience");
+        String fee=getIntent().getStringExtra("fee");
+       // startActivity(intent);
 
 
         edtName.setText(name);
@@ -85,38 +69,56 @@ public class BookingActivity extends AppCompatActivity {
 
         dateTextView.setOnClickListener(v -> showDatePicker());
         timeTextView.setOnClickListener(v -> showTimePicker());
-        updateDateTimeViews();
-        btnBooking.setOnClickListener(v -> {
-            bookingViewModel.insert(new Booking(name,address,experience,phoneno,fee,selectedDate,selectedTime));
-            Toast.makeText(this, "Your booking is successful!", Toast.LENGTH_SHORT).show();
-        });
     }
 
-    private void initEvent() {
-        btnBooking.setOnClickListener(new View.OnClickListener() {
+    private void inintEvent(){
+        btnsaveBooking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(BookingActivity.this,BookingListActivity.class);
-                startActivityForResult(i,200);
+
+                String bookingName=edtName.getText().toString();
+                String bookingAddress=edtAddress.getText().toString();
+                String bookingPhoneno=edtPhoneno.getText().toString();
+                String bookingExperience=edtExperience.getText().toString();
+                String bookingFee=edtFee.getText().toString();
+
+                String bookingDate=dateTextView.getText().toString();
+                String bookingTime=timeTextView.getText().toString();
+
+                if(TextUtils.isEmpty(bookingName)){
+                    Toast.makeText(BookingActivity.this,
+                            "Doctor's name can't be empty",Toast.LENGTH_SHORT).show();
+                }else if(TextUtils.isEmpty(bookingAddress)){
+                    Toast.makeText(BookingActivity.this,
+                            "Doctor's address can't be empty",Toast.LENGTH_SHORT).show();}
+                else if(TextUtils.isEmpty(bookingPhoneno)){
+                    Toast.makeText(BookingActivity.this,
+                            "Doctor's phone number can't be empty",Toast.LENGTH_SHORT).show();}
+                else if(TextUtils.isEmpty(bookingExperience)){
+                    Toast.makeText(BookingActivity.this,
+                            "Doctor's experiences can't be empty",Toast.LENGTH_SHORT).show();}
+                else if(TextUtils.isEmpty(bookingFee)){
+                    Toast.makeText(BookingActivity.this,
+                            "Doctor's fee can't be empty",Toast.LENGTH_SHORT).show();}
+                else if (!TextUtils.isEmpty(bookingName) && !TextUtils.isEmpty(bookingAddress) &&
+                        !TextUtils.isEmpty(bookingPhoneno)
+                        && !TextUtils.isEmpty(bookingExperience) && !TextUtils.isEmpty(bookingFee)) {
+
+
+                    Intent i = new Intent();
+                    i.putExtra("book_name", bookingName);
+                    i.putExtra("book_address", bookingAddress);
+                    i.putExtra("book_phoneno", bookingPhoneno);
+                    i.putExtra("book_experience", bookingExperience);
+                    i.putExtra("book_fee", bookingFee);
+
+                    i.putExtra("book_date", bookingDate);
+                    i.putExtra("book_time", bookingTime);
+                    setResult(RESULT_OK, i);
+                    finish();
+                }
             }
         });
-                recyclerView.setLayoutManager(new LinearLayoutManager(this));
-                recyclerView.setAdapter(bookingAdapter);
-
-    bookingViewModel.allBookingList.observe(this, new Observer<List<Booking>>() {
-        @Override
-        public void onChanged(List<Booking> bookings) {
-            bookingAdapter.setBookingList(bookings);
-        }
-    });
-    }
-
-    private void initView() {
-        recyclerView=findViewById(R.id.B_doctor_recycler);
-        btnBooking=findViewById(R.id.booking_btn);
-        bookingViewModel= ViewModelProviders.of(this).get(BookingViewModel.class);
-        bookingAdapter= new BookingAdapter(this);
-
     }
 
     private void showDatePicker() {
@@ -135,7 +137,6 @@ public class BookingActivity extends AppCompatActivity {
 
         datePickerDialog.show();
     }
-
     private void showTimePicker() {
         TimePickerDialog timePickerDialog = new TimePickerDialog(
                 this,
@@ -153,12 +154,12 @@ public class BookingActivity extends AppCompatActivity {
     }
 
     private void updateDateTimeViews() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
         SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
 
         dateTextView.setText(dateFormat.format(selectedDateTime.getTime()));
         timeTextView.setText(timeFormat.format(selectedDateTime.getTime()));
-        selectedTime=timeFormat.format(selectedDateTime.getTime());
-        selectedDate=dateFormat.format(selectedDateTime.getTime());
     }
+
+
 }

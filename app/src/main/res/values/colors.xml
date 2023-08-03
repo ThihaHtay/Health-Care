@@ -29,4 +29,7 @@
     <color name="c4">#E39075</color>
     <color name="c6">#CAD5E2</color>
     <color name="c7">#91DCD5</color>
+
+    <color name="dark_blue">#14213D</color>
+    <color name="yellow">#FCA311</color>
 </resources>
