@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="7dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:layout_marginBottom="15dp">
+
+    <RelativeLayout
+        android:id="@+id/rela_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:paddingStart="15dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:id="@+id/txt_titleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Hospital Name:"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/hospital_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/txt_titleName"
+            android:text="_______________"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_titleAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_titleName"
+            android:layout_marginBottom="20dp"
+            android:text="Address:"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/hospital_address_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txt_titleAddress"
+            android:layout_alignStart="@+id/hospital_name_tv"
+            android:layout_marginStart="-1dp"
+            android:text="_______________"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/txt_titlePhoneno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_titleAddress"
+            android:text="Ph No  :"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/hospital_phoneno_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txt_titlePhoneno"
+            android:layout_alignStart="@+id/hospital_address_tv"
+            android:text="_______________"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hospital_phoneno_tv"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/hospital_update_btn"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.5"
+                android:text="Update" />
+
+            <Button
+                android:id="@+id/hospital_delete_btn"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.5"
+                android:text="Delete" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

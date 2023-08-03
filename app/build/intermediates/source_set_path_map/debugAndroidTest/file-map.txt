@@ -1,0 +1,7 @@
+com.thiha.health.test.app-core-1.5.0-0 C:\Users\USER\.gradle\caches\transforms-3\2825fc40514e01fae0ecdd15ff716c9f\transformed\core-1.5.0\res
+com.thiha.health.test.app-annotation-experimental-1.3.0-1 C:\Users\USER\.gradle\caches\transforms-3\7d74ae52a02b977dd17662b816d6eadc\transformed\annotation-experimental-1.3.0\res
+com.thiha.health.test.app-androidTest-2 C:\Users\USER\Healthupdate1.0\Health\app\build\generated\res\resValues\androidTest\debug
+com.thiha.health.test.app-androidTest-3 C:\Users\USER\Healthupdate1.0\Health\app\build\generated\res\rs\androidTest\debug
+com.thiha.health.test.app-mergeDebugAndroidTestResources-4 C:\Users\USER\Healthupdate1.0\Health\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.thiha.health.test.app-mergeDebugAndroidTestResources-5 C:\Users\USER\Healthupdate1.0\Health\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.thiha.health.test.app-merged_res-6 C:\Users\USER\Healthupdate1.0\Health\app\build\intermediates\merged_res\debugAndroidTest

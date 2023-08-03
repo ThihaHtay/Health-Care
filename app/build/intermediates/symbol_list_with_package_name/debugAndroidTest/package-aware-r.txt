@@ -1,0 +1,3 @@
+com.thiha.health.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

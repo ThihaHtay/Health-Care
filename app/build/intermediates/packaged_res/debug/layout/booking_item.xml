@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="7dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/teal_200"
+    android:layout_marginBottom="15dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rela_layout"
+
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="10dp"
+        >
+        <TextView
+            android:id="@+id/txt_titleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:textSize="16sp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            />
+
+        <TextView
+            android:id="@+id/book_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="43dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/txt_titleName"
+            android:text="_______________"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_titleAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Address:"
+            android:layout_below="@+id/txt_titleName"
+            android:layout_marginBottom="20dp"
+            />
+        <TextView
+            android:id="@+id/book_address_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="_______________"
+            android:layout_alignBaseline="@+id/txt_titleAddress"
+            android:layout_alignStart="@+id/book_name_tv"
+            />
+        <TextView
+            android:id="@+id/txt_titlePhoneno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Ph No  :"
+            android:layout_below="@id/txt_titleAddress"
+            />
+        <TextView
+            android:id="@+id/book_experience_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="_______________"
+            android:layout_alignBaseline="@+id/txt_titlePhoneno"
+            android:layout_alignStart="@+id/book_address_tv"
+            />
+        <TextView
+            android:id="@+id/txt_titleExperience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:text="Experience :"
+            android:layout_below="@id/txt_titlePhoneno"
+            />
+        <TextView
+            android:id="@+id/book_phoneno_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="_______________"
+            android:layout_alignBaseline="@+id/txt_titleExperience"
+            android:layout_alignStart="@+id/book_name_tv"
+            />
+        <TextView
+            android:id="@+id/txt_titleFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Fee  :"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/txt_titleExperience"
+            />
+        <TextView
+            android:id="@+id/book_fee_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="_______________"
+            android:layout_alignBaseline="@+id/txt_titleFee"
+            android:layout_alignStart="@+id/book_address_tv"
+            />
+
+        <TextView
+            android:id="@+id/txt_titleDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Date  :"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/txt_titleFee"
+            />
+        <TextView
+            android:id="@+id/book_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="_______________"
+            android:layout_alignBaseline="@+id/txt_titleDate"
+            android:layout_alignStart="@+id/book_address_tv"
+            />
+
+        <TextView
+            android:id="@+id/txt_titleTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Time  :"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/txt_titleDate"
+            />
+        <TextView
+            android:id="@+id/book_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="_______________"
+            android:layout_alignBaseline="@+id/txt_titleTime"
+            android:layout_alignStart="@+id/book_address_tv"
+            />
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/book_time_tv"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/book_update_btn"
+                android:layout_weight="0.5"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:text="Update"/>
+
+            <Button
+                android:id="@+id/book_delete_btn"
+                android:layout_weight="0.5"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:text="Delete"/>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

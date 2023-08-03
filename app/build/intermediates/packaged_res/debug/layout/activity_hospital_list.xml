@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/m3"
+    tools:context=".HospitalListActivity">
+
+    <TextView
+        android:id="@+id/booking_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hospital List"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/teal_200"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="25dp"
+        ></TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hospital_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+
+        android:layout_below="@+id/booking_tv"
+        android:layout_margin="20dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="20dp"
+        tools:listitem="@layout/hospital_item" />
+
+    <Button
+        android:id="@+id/buttonAddHospital"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Add "
+        android:textSize="20dp"
+        android:layout_below="@+id/hospital_recycler"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>
